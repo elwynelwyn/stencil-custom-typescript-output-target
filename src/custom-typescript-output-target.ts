@@ -3,7 +3,9 @@ import * as ts from 'typescript';
 
 export type CompileCustomTsOptions = {
 	tsconfigPath: string;
+	skipValidate?: boolean;
 };
+
 export function compileCustomTypescriptOutputTarget(
 	config: CompileCustomTsOptions
 ): OutputTargetCustom {
@@ -11,6 +13,10 @@ export function compileCustomTypescriptOutputTarget(
 		type: 'custom',
 		name: 'compileCustomTs',
 		validate: (_, diagnostics) => {
+			if (config.skipValidate) {
+				return;
+			}
+			
 			const tsconfigJSON = ts.readConfigFile(
 				config.tsconfigPath,
 				ts.sys.readFile

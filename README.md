@@ -28,4 +28,8 @@ export const config: Config = {
 
 ## Config
 
+`CompileCustomTsOptions`: config object:
+
 `tsconfigPath`: path to the tsconfig.json file to use. This should `include` or specify `files`. It should probably `exclude` your other Stencil code, so you're not building things twice / pulling in things you didn't mean to.
+
+`skipValidate`: optional bool to skip the validate stage of the output target. This will mean any TS compiler errors will be allowed through without any issue.
