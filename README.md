@@ -1,7 +1,7 @@
 # stencil-custom-typescript-output-target
 
-![License](https://img.shields.io/npm/l/stencil-custom-typescript-output-target)
-
+![version](https://img.shields.io/npm/v/stencil-custom-typescript-output-target) 
+![license](https://img.shields.io/npm/l/stencil-custom-typescript-output-target) 
 ![build](https://img.shields.io/github/workflow/status/elwynelwyn/stencil-custom-typescript-output-target/build)
 
 StencilJS output target for compiling custom TypeScript in addition to your components.
